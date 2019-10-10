@@ -9,7 +9,7 @@ const cors = require('cors');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const childrenRouter = require('./routes/children');
-const letterRouter = require('./routes/children');
+const letterRouter = require('./routes/letter');
 
 mongoose.connect('mongodb://127.0.0.1:27017/santaDB', {
 	useNewUrlParser: true, useUnifiedTopology: true

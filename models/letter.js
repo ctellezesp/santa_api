@@ -7,7 +7,7 @@ const letterSchema = new mongoose.Schema({
 		type: Date
 	},
 	gifts: {
-		type: String
+		type: Array
 	}
 });
 module.exports = mongoose.model('letter', letterSchema);
