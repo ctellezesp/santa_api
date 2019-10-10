@@ -4,7 +4,7 @@ const childrenSchema = new mongoose.Schema({
 		type: String
 	},
 	date_birth: {
-		type: Date
+		type: String
 	},
 	address: {
 		type: String
