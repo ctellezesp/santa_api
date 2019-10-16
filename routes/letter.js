@@ -7,10 +7,9 @@ const Letter = require('../models/letter');
 router.get('/', (req, res, next) => {
 	Letter.find({})
 	.then(result => {
-		res.status(200).json({
-			message: "You have letters",
-			letter: result
-		})
+		if(result.length) {
+  			res.status(200).json({result});
+  		}
 	})
 	.catch(next);
 });
@@ -53,7 +52,7 @@ router.put('/:id', (req, res, next) => {
 	.then(result => {
 		if(result) {
 			res.status(200).json({
-				message: "Children Modificated",
+				message: "Letter Modificated",
 				letter: result
 			});
 		} else {

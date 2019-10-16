@@ -1,13 +1,16 @@
 const mongoose = require('mongoose');
 const letterSchema = new mongoose.Schema({
 	children: {
-		type: String
+		type: String,
+		required: [true, 'Cant be blank']
 	},
 	date_of_letter: {
-		type: Date
+		type: String,
+		required: [true, 'Cant be blank']
 	},
 	gifts: {
-		type: Array
+		type: Array,
+		required: [true, 'Cant be blank']
 	}
 });
 module.exports = mongoose.model('letter', letterSchema);

@@ -12,12 +12,6 @@ const userSchema = new mongoose.Schema({
 		match: [/^[a-zA-Z0-9]+$/, 'is invalid'],
 		index: {unique: true}
 	},
-	email: {
-		type: String,
-		required: [true, 'Cant be blank'],
-		match: [/\S+@\S+.\S+/, 'is invalid'],
-		index: {unique: true}
-	},
 	password: {
 		type: String,
 		required: [true, 'Cant be blank']

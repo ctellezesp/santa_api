@@ -7,10 +7,9 @@ const Children = require('../models/children');
 router.get('/', (req, res, next) => {
 	Children.find({})
 	.then(result => {
-		res.status(200).json({
-			message: "Data Get it",
-			children: result
-		})
+		if(result.length) {
+  			res.status(200).json({result});
+  		}
 	})
 	.catch(next);
 });
