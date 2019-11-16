@@ -13,7 +13,7 @@ const usersRouter = require('./routes/users');
 const childrenRouter = require('./routes/children');
 const letterRouter = require('./routes/letter');
 
-const port = process.env.PORT || 80;
+//const port = process.env.PORT || 80;
 
 mongoose.connect(uri , {
 	useNewUrlParser: true, useUnifiedTopology: true
@@ -42,7 +42,5 @@ app.use((error, req, res, next) => {
 		})
 	}
 });
-app.listen(port, function () {
-  console.log('CORS-enabled web server listening on port 80')
-});
+
 module.exports = app;
