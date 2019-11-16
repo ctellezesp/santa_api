@@ -4,7 +4,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const data = require('./.env');
+//const data = require('./.env');
 const dotenv = require('dotenv').config();
 const uri = `mongodb+srv://ctellezesp:${process.env.PASSWORD}@polonorte-dhbfz.mongodb.net/santaDB?retryWrites=true&w=majority`;
 
