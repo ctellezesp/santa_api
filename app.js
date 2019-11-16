@@ -4,14 +4,16 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
-
+const data = require('./.env');
+const dotenv = require('dotenv').config();
+const uri = `mongodb+srv://ctellezesp:${process.env.PASSWORD}@polonorte-dhbfz.mongodb.net/santaDB?retryWrites=true&w=majority`;
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const childrenRouter = require('./routes/children');
 const letterRouter = require('./routes/letter');
 
-mongoose.connect('mongodb://127.0.0.1:27017/santaDB', {
+mongoose.connect(uri , {
 	useNewUrlParser: true, useUnifiedTopology: true
 });
 

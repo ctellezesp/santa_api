@@ -9,7 +9,11 @@ router.get('/', (req, res, next) => {
   .then(result => {
   	if(result.length) {
   		res.status(200).json({result});
-  	}
+  	} else {
+		res.status(404).json({
+			message: 'Data not found'
+		});
+	}
   })
   .catch(next);
 });

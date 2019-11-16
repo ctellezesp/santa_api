@@ -24,6 +24,10 @@ router.post('/', (req, res, next) => {
 				message: "Children created",
 				children: result
 			})
+		} else {
+			res.status(404).json({
+				message: 'Data not found'
+			});
 		}
 	})
 	.catch(next);
